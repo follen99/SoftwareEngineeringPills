@@ -2,7 +2,7 @@ package it.ranauro;
 
 import static org.junit.Assert.assertTrue;
 
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * Unit test for simple App.
@@ -35,4 +35,52 @@ public class AppTest
     }
 
 
+
+    //################################## ALTRE FAMIGLIE DI TEST ##################################
+    // Before e After
+    // BeforeClass e AfterClass
+
+    @Before
+    /**
+     * il metodo annotato con 'Before' viene eseguito prima di ogni testCase.*/
+    public void prima(){
+        System.out.println("prima");
+    }
+
+    @After
+    /**
+     * il metodo annotato con 'After' viene eseguito dopo ogni testCase.*/
+    public void dopo(){
+        System.out.println("dopo");
+    }
+
+    @BeforeClass
+    /**
+     * il metodo annotato con 'BeforeClass' viene eseguito una volta per tutte prima di iniziare l'esecuzione di TUTTI
+     * i test case.*/
+    public static void primaClasse(){
+        System.out.println("prima prima");
+    }
+
+    @AfterClass
+    /**
+     * il metodo annotato con 'Afterclass' viene eseguito una volta per tutte dopo di iniziare l'esecuzione di TUTTI
+     * i test case.*/
+    public static void dopoClasse(){
+        System.out.println("dopo dopo");
+    }
 }
+
+/**
+ * l'output che mi aspetto è il seguente:
+ * prima prima
+ * prima
+ * dopo
+ * prima
+ * dopo
+ * prima
+ * dopo
+ *
+ * ERRORE
+ *
+ * dopo dopo*/
