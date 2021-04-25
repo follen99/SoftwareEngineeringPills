@@ -24,4 +24,16 @@ public class TestUnaClasse {
     public void testNotOK() throws UnaClasse.EccezioneNonVoglioZero{
         Assert.assertEquals(100, uc.unMetodo(0));
     }
+
+
+
+
+    // ############ come testo un metodo privato ?? ############
+    /**
+     * ci sono varie opzioni:
+     * 1) i metodi privati non vengono testati, per via del fatto che verranno testati inevitabilmente
+     *      quando testerò i metodi pubblici
+     *
+     * 2) posso scrivere degli appositi metodi di test per testare
+     * i metodi privati.*/
 }
