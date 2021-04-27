@@ -1,6 +1,5 @@
 package com.ranauro;
 
-import com.ranauro.persistence.DataManager;
 import com.ranauro.persistence.MyMongoDataManager;
 import com.ranauro.sacca.Sacca;
 import com.ranauro.sacca.Seriale;
@@ -16,7 +15,7 @@ public class TestCreateAndPopulateMongoDB {
         Logger mongoLogger = Logger.getLogger( "org.mongodb.driver" );
         mongoLogger.setLevel(Level.SEVERE);
 
-        DataManager dm = (DataManager) new MyMongoDataManager();
+        MyMongoDataManager dm = new MyMongoDataManager();
         dm.createDB();
 
         final int NUMSACCHE=5;
@@ -31,7 +30,7 @@ public class TestCreateAndPopulateMongoDB {
         Random generatore = new Random();
         Sacca s;
         for (int i=0; i<NUMSACCHE; i++) {
-            s = new Sacca(gruppi.get(generatore.nextInt(gruppi.size())));
+            s = new Sacca(/*gruppi.get(generatore.nextInt(gruppi.size()))*/"Ap");
             dm.addSacca(s);
             System.out.println("Added sacca: "+s);
         }

@@ -17,7 +17,7 @@ public class Seriale {
     static {
         Properties loadProps = new Properties();
         try {
-            loadProps.loadFromXML(new FileInputStream("localsettings/serial_settings.xml"));
+            loadProps.loadFromXML(new FileInputStream("serial_settings.xml"));
         } catch (InvalidPropertiesFormatException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {

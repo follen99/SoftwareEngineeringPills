@@ -15,6 +15,8 @@ import java.util.Properties;
 public class MySqlDataManager  implements DataManager{
 
     public MySqlDataManager(){
+        readLogin();
+
         Properties loadProps = new Properties();
 
         try {
@@ -30,6 +32,10 @@ public class MySqlDataManager  implements DataManager{
         host = loadProps.getProperty(TAG_HOST);
         port = loadProps.getProperty(TAG_PORT);
         db = loadProps.getProperty(TAG_DB);
+    }
+
+    private void readLogin(){
+
     }
 
     //stesso metodo dell'altra volta
@@ -131,8 +137,8 @@ public class MySqlDataManager  implements DataManager{
     private static final String COL_SERIALE = "SERIALE";
     private static final String COL_GRUPPO = "GRUPPO";
 
-    private static final String username = "root";              //da leggere da file
-    private static final String password = "gcRoot";            //da leggere da file
+    private static final String username = null;
+    private static final String password = null;
 
     private static final String SQL_CREATE_DB = "CREATE DATABASE IF NOT EXISTS ";
 
