@@ -30,7 +30,7 @@ public class TestCreateAndPopulateMongoDB {
         Random generatore = new Random();
         Sacca s;
         for (int i=0; i<NUMSACCHE; i++) {
-            s = new Sacca(/*gruppi.get(generatore.nextInt(gruppi.size()))*/"Ap");
+            s = new Sacca(gruppi.get(generatore.nextInt(gruppi.size())));
             dm.addSacca(s);
             System.out.println("Added sacca: "+s);
         }

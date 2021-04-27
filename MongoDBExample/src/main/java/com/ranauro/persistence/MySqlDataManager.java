@@ -7,10 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.InvalidPropertiesFormatException;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 public class MySqlDataManager  implements DataManager{
 
@@ -35,7 +32,11 @@ public class MySqlDataManager  implements DataManager{
     }
 
     private void readLogin(){
+        System.out.println("Inserisci la password: ");
 
+        Scanner scanner = new Scanner(System.in);
+        this.password = scanner.nextLine();
+        scanner.close();
     }
 
     //stesso metodo dell'altra volta
@@ -137,8 +138,8 @@ public class MySqlDataManager  implements DataManager{
     private static final String COL_SERIALE = "SERIALE";
     private static final String COL_GRUPPO = "GRUPPO";
 
-    private static final String username = null;
-    private static final String password = null;
+    private static final String username = "follen";
+    private String password = null;
 
     private static final String SQL_CREATE_DB = "CREATE DATABASE IF NOT EXISTS ";
 

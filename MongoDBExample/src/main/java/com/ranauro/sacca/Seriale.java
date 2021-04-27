@@ -62,7 +62,7 @@ public class Seriale {
         saveProps.setProperty(TAG_RADICE, radice);
         saveProps.setProperty(TAG_LAST_ASSIGNED, Integer.toString(lastAssigned));
         try {
-            FileOutputStream fos = new FileOutputStream("localsettings/serial_settings.xml");
+            FileOutputStream fos = new FileOutputStream("serial_settings.xml");
             saveProps.storeToXML(fos, "");
             fos.close();
         } catch (IOException e) {
